@@ -1,0 +1,53 @@
+@use "sass:map";
+@use "../global" as *;
+
+.p-section {
+  margin-top: 5rem;
+  background-color: #fff;
+  &:nth-of-type(2n) {
+    background-color: var(--sub);
+  }
+}
+
+.p-section__title {
+  text-align: center;
+}
+
+.p-section__title--main {
+  letter-spacing: 0.1em;
+  font-size: size-calc-clamp(25, 50, 375, 1440);
+  font-weight: 500;
+  padding-inline: size-calc-clamp(20, 40, 375, 1440);
+  display: inline-block;
+  position: relative;
+  &::before,
+  &::after {
+    content: "-";
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 1rem;
+    height: auto;
+  }
+  &::before {
+    left: 0;
+  }
+  &::after {
+    right: 0;
+  }
+}
+.p-section__title--sub {
+  display: block;
+  font-size: size-calc-clamp(16, 24, 375, 1440);
+  margin-top: size-calc-clamp(0, 10, 375, 1440);
+}
+.p-section__contents {
+  margin-top: size-calc-clamp(10, 40, 375, 1440);
+  background-color: var(--sub);
+  box-shadow: 0 4px 15px 0 rgba(black, 0.15);
+  padding: size-calc-clamp(20, 40, 375, 1440);
+
+  .p-section:nth-of-type(2n) & {
+    background-color: #fff;
+  }
+}

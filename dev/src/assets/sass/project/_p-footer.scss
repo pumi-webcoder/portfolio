@@ -1,0 +1,22 @@
+@use "../global" as *;
+
+.p-footer {
+  background: var(--drawer-bg-sp);
+}
+
+.p-footer__contents {
+  display: grid;
+  place-items: center;
+  height: var(--height-pc-footer);
+  @include mq(sp) {
+    height: var(--height-sp-footer);
+  }
+}
+
+.p-footer__copyright {
+  color: white;
+  text-align: center;
+  font-family: "Noto Sans JP";
+  font-size: size-calc-clamp(16, 20, 375, 1440);
+  font-weight: 400;
+}

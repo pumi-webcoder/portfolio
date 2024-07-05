@@ -1,0 +1,15 @@
+@use "../global" as *;
+
+.p-works__contents {
+  // bulletの配置分多めにpaddingとる
+  padding: 5% 5% 8%;
+  position: relative;
+}
+.p-works__explanation {
+  margin-top: 1.5rem;
+  font-size: size-calc-clamp(12, 24, 375, 1440);
+
+  p + p {
+    margin-top: 1rem;
+  }
+}

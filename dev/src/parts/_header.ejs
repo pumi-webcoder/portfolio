@@ -1,0 +1,68 @@
+<!-- prettier-ignore -->
+<%_
+const menus = [ 
+  { 
+    name : "works" ,
+    link : path + "/#works", 
+    target : "_self"
+  },
+  { 
+    name : "skills" ,
+    link : path + "/#skills",
+    target : "_self"
+  },
+  { 
+    name : "about" ,
+    link : path + "/#about",
+    target : "_self"
+  },
+  { 
+    name : "contact" ,
+    link : path + "/#contact",
+    target : "_self"
+  },
+  { 
+    name : "Twitter(X)" ,
+    link : "https://twitter.com/pumi_webcoder",
+    target : "_blank" 
+  }
+]; _%>
+<header class="l-header p-header">
+  <div class="l-inner">
+    <!-- ロゴ、グローバルナビ、ハンバーガーメニュー -->
+    <div class="p-header__container">
+      <!-- ロゴ -->
+      <h1 class="c-logo">
+        <a href="./index.html">Pumi's<br />Portfolio</a>
+      </h1>
+      <!-- グローバルナビ -->
+      <nav class="p-header__nav">
+        <ul class="p-header__nav--list">
+          <%_ menus.forEach(menu => { _%>
+          <div class="p-header__nav--item">
+            <a class="p-header__nav--link hover__underline--from-left" href="<%= menu.link %>" target="<%= menu.target %>"><%= menu.name %></a>
+          </div>
+          <%_ }); _%>
+        </ul>
+      </nav>
+      <!-- ハンバーガーメニュー -->
+      <div class="p-header__hamburger--button">
+        <button id="js-drawer__btn" class="c-hamburger-btn" aria-label="ハンバーガーメニュー">
+          <% for (let i = 0; i < 3; i++) { %>
+          <span class="c-hamburger-bar"></span>
+          <% } %>
+        </button>
+      </div>
+    </div>
+    <!-- ドロワーメニュー（ヘッダーコンテナの外） -->
+    <nav class="p-drawer__nav">
+      <ul class="header__nav--list">
+        <%_ menus.forEach(menu => { _%>
+        <div class="p-drawer__nav--item">
+          <a class="p-drawer__nav--link" href="<%= menu.link %>"><%= menu.name %></a>
+        </div>
+        <%_ }); _%>
+      </ul>
+    </nav>
+  </div>
+</header>

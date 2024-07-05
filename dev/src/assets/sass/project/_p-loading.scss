@@ -1,0 +1,75 @@
+@use "../global" as *;
+
+/* ローディング画面の背景 */
+.p-loading__bg {
+  width: 100vw;
+  height: 100vh;
+  background-color: #333;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 9999;
+}
+
+.p-loading__spiner {
+  width: 50px;
+  height: 50px;
+  @include mq(sp) {
+    width: 40px;
+    height: 40px;
+  }
+  margin-inline: auto;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -100%);
+}
+
+// ローディング画面の文字
+.p-loading__text {
+  position: absolute;
+  top: 51%;
+  left: 0; // 初期位置を設定
+  width: 100px;
+  height: 100px;
+  animation: move 2s linear infinite;
+  font-size: 2rem;
+  place-items: center;
+  opacity: 0; // 初期状態で透明にする
+  @include mq(sp) {
+    font-size: 1.2rem;
+  }
+}
+
+// ローディング後の停止クラス
+.loaded {
+  opacity: 0;
+}
+
+// ローディングアニメーション（左から右へ移動＆回転）
+@keyframes move {
+  0% {
+    left: 0;
+    opacity: 0;
+    color: white;
+  }
+  10% {
+    opacity: 1; // 10%の時点で表示を開始
+  }
+  35% {
+    left: 40%;
+    opacity: 1;
+  }
+  65% {
+    left: 60%;
+    opacity: 1;
+  }
+  90% {
+    opacity: 1; // 90%の時点まで表示を続ける
+  }
+  100% {
+    left: 100%;
+    opacity: 0; // 100%の時点で再度透明に
+    color: blue;
+  }
+}

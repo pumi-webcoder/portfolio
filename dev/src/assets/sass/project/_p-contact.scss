@@ -1,0 +1,118 @@
+@use "../global" as *;
+
+// contact
+.p-contact {
+  background: #fff;
+  text-align: center;
+}
+
+.p-contact__form--item {
+  text-align: left;
+  padding-block: size-calc-clamp(13, 28, 375, 1440);
+  display: flex;
+  align-items: center;
+  gap: size-calc-clamp(10, 60, 375, 1440);
+  @include mq(sp) {
+    flex-direction: column;
+    align-items: revert;
+    gap: size-calc-clamp(10, 30, 375, 1440);
+  }
+}
+.p-contact__form--title {
+  display: flex;
+  gap: size-calc-clamp(12, 16, 375, 1440);
+  align-items: center;
+  flex: 0 0 180px;
+  @include mq(sp) {
+    flex: revert;
+  }
+}
+
+.p-contact__form--title-text {
+  display: grid;
+  place-items: center;
+}
+
+.p-contact__form--require {
+  background-color: var(--accent);
+  width: 36px;
+  height: 23px;
+  border-radius: 4px;
+  white-space: nowrap;
+  font-size: 10px;
+  font-weight: 700;
+  color: #fff;
+  display: grid;
+  place-items: center;
+}
+
+.p-contact__form--input,
+.p-contact__form--selectbox-wrapper,
+.p-contact__form--date-wrapper {
+  flex: 1;
+}
+
+.p-contact__form--radio-wrapper {
+  display: flex;
+  gap: size-calc-clamp(10, 32, 375, 1440);
+  align-items: center;
+  @include mq(sp) {
+    flex-direction: column;
+    align-items: revert;
+  }
+}
+
+.p-contact__form--item-privacy {
+  justify-content: center;
+  flex-direction: column;
+  gap: 20px;
+}
+.p-contact__wrapper-privacy {
+  flex: revert;
+  justify-content: center;
+  align-items: center;
+}
+
+.p-contact__btn {
+  margin-top: 10px;
+  &:disabled {
+    cursor: not-allowed;
+    border-color: transparent;
+    background-color: #ccc;
+    background-image: revert;
+    // color: black;
+    @media (hover: hover) {
+      &:hover,
+      &:focus {
+        background-color: #ccc;
+        transform: revert;
+        box-shadow: 0px 4px 0px 0px currentColor;
+      }
+    }
+  }
+}
+.p-contact__message--success,
+.p-contact__message--error {
+  // margin-top: 2rem;
+  text-align: center;
+  display: none; /* 最初は非表示 */
+  background: #fff;
+  padding: 20px;
+  font-size: 1rem;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+  &.show {
+    display: block;
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.p-contact__message--success {
+  color: blue;
+}
+
+.p-contact__message--error {
+  color: var(--accent);
+}

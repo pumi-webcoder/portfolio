@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <!-- head -->
+  <%- include("./parts/_head",{ path:".", }) -%>
+
+  <body>
+    <!-- header -->
+    <%- include("./parts/_header",{ path:"..", }) -%>
+
+    <main class="main">
+      <!-- BackGround -->
+      <%- include("./parts/_back-ground",{ path:".", }) -%>
+      <!-- headerの高さ分の余白を取る -->
+      <div class="u-separeta--header"></div>
+      <!-- contact -->
+      <%- include("./parts/_privacy-policy",{ path:".", }) -%>
+      <!-- footer -->
+      <%- include("./parts/_footer",{ path:".", }) -%>
+      <!-- to-top -->
+      <%- include("./parts/_to-top",{ path:".", }) -%>
+    </main>
+    <!-- script-js -->
+    <%- include("./parts/_script-js",{ path:".", }) -%>
+  </body>
+</html>

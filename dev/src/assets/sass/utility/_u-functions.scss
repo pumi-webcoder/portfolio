@@ -1,0 +1,19 @@
+@use "../global" as *;
+
+.mask {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-color: gray;
+}
+.accent {
+  color: var(--accent);
+}
+.display-inline-block {
+  display: inline-block;
+}
+strong {
+  &.color-accent {
+    color: var(--accent);
+  }
+}
