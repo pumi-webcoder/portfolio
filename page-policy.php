@@ -49,7 +49,7 @@
 			<h2 class="p-privacy-policy__title-sub">5. 個人情報に関するお問い合わせ</h2>
 			<p class="p-privacy-policy__text">個人情報に関するお問い合わせは以下までお願いします。</p>
 			<p class="p-privacy-policy__text">
-				<a href="mailto:pumi.Webdesigner@gmail.com">pumi.Webdesigner@gmail.com</a>
+				<a href="mailto:pumi.Webdesigner@gmail.com">pumi.webcoder@gmail.com</a>
 			</p>
 		</div>
 		<div class="p-privacy-policy__box">
