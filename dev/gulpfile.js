@@ -52,14 +52,14 @@ function compileSass() {
     .pipe(sass()) //sassコンパイルを実行
     .pipe(postcss([autoprefixer(), cssSorter()])) // ベンダープレフィックスを付加して、プロパティをソート
     .pipe(mmq()) // メディアクエリをまとめる
-    .pipe(gulp.dest("../")) // 圧縮前ファイルを一旦出力ディレクトリに書き出し
-    .pipe(cleanCss()) // cssの圧縮処理
-    .pipe(
-      rename({
-        suffix: ".min", //.minをファイル名に追加
-      })
-    )
-    .pipe(gulp.dest("../")); // 出力ディレクトリに書き出し
+    .pipe(gulp.dest("../")); // 圧縮前ファイルを一旦出力ディレクトリに書き出し
+  // .pipe(cleanCss()) // cssの圧縮処理
+  // .pipe(
+  //   rename({
+  //     suffix: ".min", //.minをファイル名に追加
+  //   })
+  // )
+  // .pipe(gulp.dest("../")); // 出力ディレクトリに書き出し
 }
 
 function watch() {
@@ -83,16 +83,18 @@ function browserReload(done) {
 }
 
 function minJS() {
-  return gulp
-    .src("./src/assets/js/**/*.js")
-    .pipe(gulp.dest("../assets/js/")) // 圧縮前ファイルを一旦出力ディレクトリに書き出し
-    .pipe(uglify()) //jsの圧縮処理
-    .pipe(
-      rename({
-        suffix: ".min",
-      })
-    )
-    .pipe(gulp.dest("../assets/js/"));
+  return (
+    gulp
+      .src("./src/assets/js/**/*.js")
+      // .pipe(gulp.dest("../assets/js/")) // 圧縮前ファイルを一旦出力ディレクトリに書き出し
+      .pipe(uglify()) //jsの圧縮処理
+      .pipe(
+        rename({
+          suffix: ".min",
+        })
+      )
+      .pipe(gulp.dest("../assets/js/"))
+  );
 }
 
 function compileEJS() {

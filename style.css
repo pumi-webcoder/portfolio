@@ -1697,7 +1697,7 @@ input[type=date].is-input::before {
 	display: inline-block;
 }
 
-strong.color-accent {
+.color-accent {
 	color: var(--accent);
 }
 
@@ -1711,12 +1711,6 @@ strong.color-accent {
 
 .hover__underline--from-left:hover {
 	background-size: 100% 2px; /* 線の横幅を100%にする */
-}
-
-.circle {
-	height: 80px;
-	position: absolute;
-	width: 80px;
 }
 
 .circle svg {

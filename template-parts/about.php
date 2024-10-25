@@ -11,22 +11,22 @@
 					<div class="p-about__text--main intro-text">
 						ポートフォリオをご覧頂き、ありがとうございます。
 						<br />
-						お客様のご要望に合わせて<strong class="color-accent">最適なサイト</strong>を制作いたします。
+						お客様のご要望に合わせて<span class="color-accent">最適なサイト</span>を制作いたします。
 						<br />
-						ご満足いただけるサイトを提供できるよう<strong class="color-accent">修正についても柔軟に対応</strong>させていただきます。
+						ご満足いただけるサイトを提供できるよう<span class="color-accent">修正についても柔軟に対応</span>させていただきます。
 						<br />
-						一度きりのお仕事のお付き合いだけではなく、<strong class="color-accent">継続的に信頼し合える</strong>お付き合いをさせていただけると嬉しいです。
+						一度きりのお仕事のお付き合いだけではなく、<span class="color-accent">継続的に信頼し合える</span>お付き合いをさせていただけると嬉しいです。
 					</div>
 					<div class="p-about__text--sub schedule-text">
 						<div class="p-about__text--sub-title">稼働時間</div>
 						<div class="p-about__text--sub-message">
 						平　日：
-						<strong class="color-accent"> 4時間 </strong>
+						<span class="color-accent"> 4時間 </span>
 						対応可能です <div class="display-inline-block">（5:00〜7:00,19:00〜21:00）</div> 
 						</div>
 						<div class="p-about__text--sub-message">
 						土日祝：
-						<strong class="color-accent"> 8時間 </strong>
+						<span class="color-accent"> 8時間 </span>
 						対応可能です
 						<div class="display-inline-block">（5:00〜10:00,18:00〜21:00）</div>
 						</div>

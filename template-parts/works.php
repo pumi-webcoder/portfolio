@@ -82,7 +82,7 @@
 			<div class="swiper-pagination js-pagination"></div>
 			<!-- スライダーのページネーション -->
 			<div class="p-works__explanation js-explanation">
-				<p>Basic認証を設定しております。<br />ユーザー名・パスワードともに『demo』となります。</p>
+				<p>Basic認証を設定している制作物は、<br />ユーザー名・パスワードともに『demo』となります。</p>
 			</div>
 		</div>
 	</div>
