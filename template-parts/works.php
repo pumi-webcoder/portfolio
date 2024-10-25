@@ -33,9 +33,7 @@
 								<div class="p-dialog__text">
 									<?php
 									// カスタムフィールドの設定を配列でまとめる
-										$args = array(
-											'dt0' => '制作物',
-											'dd0' => 'name',								
+										$args = array(							
 											'dt1' => 'スキル',
 											'dd1' => 'skills',
 											'dt2' => '制作時期',

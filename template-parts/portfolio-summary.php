@@ -1,8 +1,6 @@
 <dl>
-	<?php if (get_field($args['dd0'])) { ?>
-		<dt><?php echo $args['dt0']; ?></dt>
-		<dd><?php the_field($args['dd0']); ?></dd>
-	<?php } ?>
+	<dt>制作物</dt>
+	<dd><?php echo esc_html(get_the_title()); ?></dd>
 	<?php if (get_field($args['dd1'])) { ?>
 		<dt><?php echo $args['dt1']; ?></dt>
 		<dd><?php the_field($args['dd1']); ?></dd>

@@ -1284,6 +1284,7 @@ a {
 	background-color: #ccc;
 	background-image: revert;
 	border-color: transparent;
+	box-shadow: revert;
 	cursor: not-allowed;
 }
 
