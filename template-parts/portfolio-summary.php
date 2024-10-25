@@ -1,4 +1,8 @@
 <dl>
+	<?php if (get_field($args['dd0'])) { ?>
+		<dt><?php echo $args['dt0']; ?></dt>
+		<dd><?php the_field($args['dd0']); ?></dd>
+	<?php } ?>
 	<?php if (get_field($args['dd1'])) { ?>
 		<dt><?php echo $args['dt1']; ?></dt>
 		<dd><?php the_field($args['dd1']); ?></dd>

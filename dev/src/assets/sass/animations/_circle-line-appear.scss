@@ -1,0 +1,27 @@
+.circle {
+  position: absolute;
+  width: 80px;
+  height: 80px;
+}
+.circle svg {
+  width: 100%;
+  height: 100%;
+  transform: rotate(-90deg);
+}
+.circle circle {
+  stroke: #77f;
+  fill: none;
+  stroke-width: 2px;
+  stroke-dasharray: 0 600;
+  transition: stroke-dasharray 0.5s, stroke 0.5s;
+}
+.circle.appear circle {
+  stroke-dasharray: 600 900;
+}
+.circle.end circle {
+  stroke: transparent;
+  // fill: none;
+  // stroke-width: 2px;
+  // stroke-dasharray: 0 600;
+  // transition: stroke-dasharray 0.5s;
+}

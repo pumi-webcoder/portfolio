@@ -1712,6 +1712,34 @@ strong.color-accent {
 	background-size: 100% 2px; /* 線の横幅を100%にする */
 }
 
+.circle {
+	height: 80px;
+	position: absolute;
+	width: 80px;
+}
+
+.circle svg {
+	height: 100%;
+	transform: rotate(-90deg);
+	width: 100%;
+}
+
+.circle circle {
+	stroke: #77f;
+	fill: none;
+	stroke-width: 2px;
+	stroke-dasharray: 0 600;
+	transition: stroke-dasharray 0.5s, stroke 0.5s;
+}
+
+.circle.appear circle {
+	stroke-dasharray: 600 900;
+}
+
+.circle.end circle {
+	stroke: transparent;
+}
+
 @media (768px <= width) {
 
 .wpcf7-list-item {

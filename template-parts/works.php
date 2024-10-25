@@ -6,19 +6,17 @@
 		</hgroup>
 
 		<div class="p-section__contents swiper p-works__contents">
-			<ul class="swiper-wrapper">
-
+		<!-- スライダーの全体 -->
+		<ul class="swiper-wrapper">
 			<?php
 			// カスタム投稿タイプ 'work' の最新投稿を取得
 			$args = array(
 				'post_type' => 'work',
-				'posts_per_page' => 10, // 表示したい投稿数
+				'posts_per_page' => 5, // 表示したい投稿数
 			);
 			$work_query = new WP_Query($args);
-			
 			if ($work_query->have_posts()) :
 				while ($work_query->have_posts()) : $work_query->the_post(); ?>
-
 					<li class="swiper-slide p-works-slide js-slide">
 						<?php if (has_post_thumbnail()) : ?>
 							<div class="p-works__img c-img js-modal__btn--open">
@@ -36,6 +34,8 @@
 									<?php
 									// カスタムフィールドの設定を配列でまとめる
 										$args = array(
+											'dt0' => '制作物',
+											'dd0' => 'name',								
 											'dt1' => 'スキル',
 											'dd1' => 'skills',
 											'dt2' => '制作時期',
@@ -70,10 +70,19 @@
 			endif; ?>
 
 			</ul>
-			<div class="swiper-button-prev js-button-prev"></div>
-			<div class="swiper-button-next js-button-next"></div>
+			<!-- スライダーのボタン -->
+			<div class="circle swiper-button-prev js-button-prev">
+				<svg>
+					<circle cx="50%" cy="50%" r="49%"></circle>
+				</svg>
+			</div>
+			<div class="circle swiper-button-next js-button-next">
+				<svg>
+					<circle cx="50%" cy="50%" r="49%"></circle>
+				</svg>
+			</div>
 			<div class="swiper-pagination js-pagination"></div>
-
+			<!-- スライダーのページネーション -->
 			<div class="p-works__explanation js-explanation">
 				<p>Basic認証を設定しております。<br />ユーザー名・パスワードともに『demo』となります。</p>
 			</div>
