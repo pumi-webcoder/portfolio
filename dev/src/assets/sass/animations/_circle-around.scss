@@ -1,0 +1,35 @@
+@use "sass:map";
+@use "../global" as *;
+
+:root {
+  --radius: 50px;
+  @include mq(sp) {
+    --radius: 30px;
+  }
+}
+.around-circle {
+  position: relative;
+  width: calc(var(--radius) * 2);
+  height: calc(var(--radius) * 2);
+  border-radius: 50%;
+  animation: circle-around-rotate 20s linear infinite reverse;
+  span {
+    position: absolute;
+    left: 50%;
+    top: 0;
+    transform-origin: 0 var(--radius);
+    font-family: monospace;
+    @include mq(sp) {
+      font-size: 10px;
+    }
+  }
+}
+
+@keyframes circle-around-rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(-360deg);
+  }
+}

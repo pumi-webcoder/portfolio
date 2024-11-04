@@ -32,7 +32,7 @@
 						</div>
 					</div>
 				</div>
-				<div class="p-about__img">
+				<div class="p-about__img anime-shutter">
 					<img src="<?php echo get_template_directory_uri() ?>/assets/img/pumi.webp" alt="プミ画像" />
 				</div>
 			</div>
