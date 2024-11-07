@@ -33,6 +33,8 @@ function my_script_init() {
     wp_enqueue_script("text-appear-js", get_template_directory_uri() . "/assets/js/text-appear.min.js", array("jquery"), filemtime(get_theme_file_path('/assets/js/text-appear.min.js')), true);
     wp_enqueue_script("logo-circle-js", get_template_directory_uri() . "/assets/js/logo-circle.min.js", array("jquery"), filemtime(get_theme_file_path('/assets/js/logo-circle.min.js')), true);
     wp_enqueue_script("observe-js", get_template_directory_uri() . "/assets/js/observe.min.js", array("jquery"), filemtime(get_theme_file_path('/assets/js/observe.min.js')), true);
+    wp_enqueue_script("scroll-js", get_template_directory_uri() . "/assets/js/scroll.min.js", array("jquery"), filemtime(get_theme_file_path('/assets/js/scroll.min.js')), true);
+    wp_enqueue_script("scroll-appear-js", get_template_directory_uri() . "/assets/js/scroll-appear.min.js", array("jquery"), filemtime(get_theme_file_path('/assets/js/scroll-appear.min.js')), true);
     wp_enqueue_script("wow-js", get_template_directory_uri() . "/assets/js/wow.min.js", array(), filemtime(get_theme_file_path('/assets/js/wow.min.js')), true);
     wp_enqueue_script("my-js", get_template_directory_uri() . "/assets/js/script.min.js", array("jquery"), filemtime(get_theme_file_path('/assets/js/script.min.js')), true);
 }

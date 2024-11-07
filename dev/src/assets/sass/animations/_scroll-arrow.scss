@@ -1,0 +1,150 @@
+@use "sass:map";
+@use "../global" as *;
+
+@keyframes toTop {
+  0% {
+    bottom: 10px;
+    height: 40px;
+  }
+  10% {
+    bottom: 10px;
+    height: 40px;
+  }
+  90% {
+    bottom: 10px;
+    height: 60px;
+  }
+  100% {
+    bottom: 10px;
+    height: 60px;
+  }
+}
+
+.scroll-totop {
+  position: fixed;
+  bottom: 160px;
+  right: 0;
+  width: 80px;
+  height: 80px;
+  // bottom: 180px;
+  // right: 20px;
+  // width: 100px;
+  opacity: 0;
+  transition: opacity 1s;
+  z-index: 9000;
+  &.is-appear-totop {
+    opacity: 1;
+  }
+}
+
+.scroll-totop-text {
+  position: absolute;
+  bottom: 20px;
+  left: 10px;
+  rotate: -90deg;
+  // bottom: 40px;
+  // left: 110px;
+}
+.scroll-totop-arrow {
+  animation: 2s 0s ease-in-out backwards infinite toTop;
+  position: absolute;
+  bottom: 10px;
+  left: 50px;
+  width: 1px;
+  height: 40px;
+  background: black;
+
+  // bottom: 30px;
+  // left: 150px;
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 10px;
+    height: 1px;
+    transform-origin: left top;
+    background: black;
+    rotate: 45deg;
+    // rotate: -45deg;
+    // bottom: revert;
+    // bottom: 0;
+    // left: 0;
+  }
+}
+
+.scroll-down {
+  position: fixed;
+  top: 160px;
+  right: 10px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 10px;
+  opacity: 0;
+  transition: opacity 1s;
+  z-index: 9000;
+  @include mq(sp) {
+    right: 16px;
+    top: 80px;
+  }
+  &.is-appear-scroll-down {
+    opacity: 1;
+  }
+}
+
+.scroll-down-text {
+  font-size: 12px;
+}
+.scroll-down-bar {
+  position: relative;
+  span {
+    display: inline-block;
+  }
+  .bar {
+    width: 2px;
+    height: 70px;
+    background: #000;
+    @include mq(sp) {
+      height: 40px;
+    }
+  }
+  .circle {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    translate: -50%;
+    width: 10px;
+    height: auto;
+    aspect-ratio: 1;
+    background: #000;
+    border-radius: 50%;
+    animation: 2s ease-in-out backwards infinite scrollDown;
+    @include mq(sp) {
+      animation: 2s ease-in-out backwards infinite scrollDownSP;
+    }
+  }
+}
+@keyframes scrollDown {
+  0% {
+    top: 0;
+  }
+  80% {
+    top: 60px;
+  }
+  100% {
+    top: 60px;
+  }
+}
+@keyframes scrollDownSP {
+  0% {
+    top: 0;
+  }
+  80% {
+    top: 30px;
+  }
+  100% {
+    top: 30px;
+  }
+}

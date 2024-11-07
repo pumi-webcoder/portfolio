@@ -2,12 +2,18 @@
 @use "../global" as *;
 
 .anime-shutter {
-  animation: shutter-opacity 2s 5s cubic-bezier(0.4, 0, 0.2, 1) forwards;
   overflow: hidden;
   position: relative;
   opacity: 0;
+
+  &.is-shutter-open {
+    animation: shutter-opacity 2s 0s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+    &::before {
+      animation: shutter-translate 2s 0s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+    }
+  }
   &::before {
-    animation: shutter-translate 2s 5s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+    // animation: shutter-translate 2s 5s cubic-bezier(0.4, 0, 0.2, 1) forwards;
     background: #fff;
     content: "";
     inset: 0;

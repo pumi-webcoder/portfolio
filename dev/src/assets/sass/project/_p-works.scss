@@ -1,5 +1,19 @@
 @use "../global" as *;
 
+// .p-works {
+//   hgroup {
+//     position: relative;
+//   }
+//   .around-circle {
+//     // position: relative;
+//     position: absolute;
+//     top: 0;
+//     right: calc(50% + 140px);
+//     @include mq(sp) {
+//       right: calc(50% + 100px);
+//     }
+//   }
+// }
 .p-works__contents {
   // bulletの配置分多めにpaddingとる
   padding: 5% 5% 8%;

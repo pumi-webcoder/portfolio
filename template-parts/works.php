@@ -1,8 +1,12 @@
-<section id="works" class="l-section l-first-view p-section js-first-view">
+<section id="works" class="l-section l-first-view p-section p-works js-first-view">
 	<div class="l-inner">
 		<hgroup class="p-section__title">
 			<h2 class="p-section__title--main">Works</h2>
 			<p class="p-section__title--sub">実績</p>
+			<!-- ロゴ（円形） -->
+<!-- <a href="<?php echo home_url('/'); ?>" id="circular-text" class="around-circle">
+    Pumi's Portfolio
+</a> -->
 		</hgroup>
 
 		<div class="p-section__contents swiper p-works__contents">

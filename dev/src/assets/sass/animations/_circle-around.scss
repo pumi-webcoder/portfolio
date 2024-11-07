@@ -3,16 +3,28 @@
 
 :root {
   --radius: 50px;
+  @include mq(tb) {
+    --radius: 40px;
+  }
   @include mq(sp) {
     --radius: 30px;
   }
 }
+
 .around-circle {
-  position: relative;
+  // position: relative;
+  position: fixed;
+  left: 20px;
+  top: 140px;
+  color: black;
   width: calc(var(--radius) * 2);
   height: calc(var(--radius) * 2);
   border-radius: 50%;
   animation: circle-around-rotate 20s linear infinite reverse;
+  z-index: 9000;
+  @include mq(sp) {
+    top: 75px;
+  }
   span {
     position: absolute;
     left: 50%;

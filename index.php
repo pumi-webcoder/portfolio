@@ -20,5 +20,9 @@
 <?php 
 	get_template_part('template-parts/contact');
 ?>
+<!-- scroll-arrow -->
+<?php 
+	get_template_part('template-parts/scroll-arrow');
+?>
 
 <?php get_footer(); ?>
