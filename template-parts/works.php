@@ -16,7 +16,7 @@
 			// カスタム投稿タイプ 'work' の最新投稿を取得
 			$args = array(
 				'post_type' => 'work',
-				'posts_per_page' => 5, // 表示したい投稿数
+				'posts_per_page' => -1, // 表示したい投稿数
 			);
 			$work_query = new WP_Query($args);
 			if ($work_query->have_posts()) :
