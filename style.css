@@ -1744,15 +1744,13 @@ input[type=date].is-input::before {
 	border-radius: 50%;
 	color: black;
 	height: calc(var(--radius) * 2);
-	left: 20px;
-	position: fixed;
-	top: 140px;
 	width: calc(var(--radius) * 2);
 	z-index: 9000;
 }
 
 .around-circle span {
 	font-family: monospace;
+	font-size: 16px;
 	left: 50%;
 	position: absolute;
 	top: 0;
@@ -2013,10 +2011,6 @@ input[type=date] {
 
 :root {
 	--radius: 30px;
-}
-
-.around-circle {
-	top: 75px;
 }
 
 .around-circle span {

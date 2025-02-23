@@ -12,9 +12,6 @@
 	</div>
 </div>
 
-<!-- ロゴ（円形） -->
-<a href="#" id="circular-text" class="around-circle">
-    Pumi's Portfolio
-</a>
+
 
  

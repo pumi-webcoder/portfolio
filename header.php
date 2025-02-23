@@ -27,7 +27,13 @@
 			<div class="p-header__container <?php if (!is_front_page()) echo 'u-flex-center'; ?>">
 				<!-- ロゴ　　トップページではロゴをh1に、それ以外のページではdivに -->
 				<?php if (is_front_page()) : ?>
-					<h1 class="p-header__logo"><a href="<?php echo home_url('/'); ?>">Pumi's<br />Portfolio</a></h1>
+					<h1 class="p-header__logo">
+					<!-- ロゴ（円形） -->
+						<a href="<?php echo home_url('/'); ?>" id="circular-text" class="around-circle">
+							Pumi's Portfolio
+						</a>	
+
+					</h1>
 				<?php else : ?>
 					<div class="p-header__logo"><a href="<?php echo home_url('/'); ?>">Pumi's<br />Portfolio</a></div>
 				<?php endif; ?>

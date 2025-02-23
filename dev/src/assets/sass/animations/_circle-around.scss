@@ -13,24 +13,25 @@
 
 .around-circle {
   // position: relative;
-  position: fixed;
-  left: 20px;
-  top: 140px;
+  // position: fixed;
+  // left: 20px;
+  // top: 140px;
   color: black;
   width: calc(var(--radius) * 2);
   height: calc(var(--radius) * 2);
   border-radius: 50%;
   animation: circle-around-rotate 20s linear infinite reverse;
   z-index: 9000;
-  @include mq(sp) {
-    top: 75px;
-  }
+  // @include mq(sp) {
+  //   top: 75px;
+  // }
   span {
     position: absolute;
     left: 50%;
     top: 0;
     transform-origin: 0 var(--radius);
     font-family: monospace;
+    font-size: 16px;
     @include mq(sp) {
       font-size: 10px;
     }
