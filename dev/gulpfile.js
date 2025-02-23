@@ -118,10 +118,11 @@ function copyCss() {
 ///////////////exports//////////////////
 
 // wacthする前の初回出力ファイル作成
-exports.build = gulp.parallel(compileEJS, minJS, compileSass, copyImage, copyCss);
+// exports.build = gulp.parallel(compileEJS, minJS, compileSass, copyImage, copyCss);
+exports.build = gulp.parallel(minJS, compileSass, copyImage);
 // ブラウザ表示、変更監視まとめて実行
 // exports.dev = gulp.parallel(browserInit, watch);
-exports.dev = gulp.series(browserInit, watch);
+// exports.dev = gulp.series(browserInit, watch);
 // 画面表示
 exports.browserInit = browserInit;
 // 変更監視
