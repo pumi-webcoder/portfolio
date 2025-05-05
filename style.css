@@ -778,6 +778,7 @@ a {
 }
 
 .p-header__logo {
+	color: white;
 	display: grid;
 	font-size: clamp(16px, 16px + 14 * (100vw - 375px) / 1065, 30px);
 	letter-spacing: 0.12em;
@@ -891,6 +892,10 @@ a {
 	width: 100%;
 	-o-object-fit: cover;
 	object-fit: cover;
+}
+
+.p-to-top * {
+	pointer-events: none !important;
 }
 
 .p-dialog__wrapper {
@@ -1795,6 +1800,10 @@ input[type=date].is-input::before {
 	opacity: 1;
 }
 
+.scroll-totop * {
+	pointer-events: none;
+}
+
 .scroll-totop-text {
 	bottom: 20px;
 	left: 10px;
@@ -1831,6 +1840,7 @@ input[type=date].is-input::before {
 	flex-direction: column;
 	gap: 10px;
 	opacity: 0;
+	pointer-events: none;
 	position: fixed;
 	right: 10px;
 	transition: opacity 1s;

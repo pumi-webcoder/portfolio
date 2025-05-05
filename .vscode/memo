@@ -6,12 +6,9 @@ Sync Local -> Remoteでアップロード
 "privateKeyPath": "/Users/pumi/.ssh/pumiwebcoder.key",
 
 
-"remotePath": "/home/pumiwebcoder/pumiwebcoder.xsrv.jp/public_html/hp-for-jinja",
-"remotePath": "/home/pumiwebcoder/pumiwebcoder.xsrv.jp/public_html/pumi-blog2/wp-content/themes/pumi-blog",
-"remotePath": "/home/pumiwebcoder/pumiwebcoder.xsrv.jp/public_html/hp-for-shrine/wp-content/themes/Original",
-
-
 "ignore": ["**/.vscode", "**/dev", "**/node_modules", "**/svgs", "**/taihi", "**/.gitignore", "**/.git", "**/.DS_Store", "**/dist", "**/trash", "**/uploads", "**/*.php", "**/*.copy", "**/wordpress"]
 "ignore": ["**/.vscode", "**/dev", "**/node_modules", "**/public", "**/svgs", "**/taihi", "**/.gitignore", "**/.git", "**/.DS_Store", "**/dist", "**/trash", "**/uploads", "**/*.copy"]
 
 
+"remotePath": "/home/pumiwebcoder/pumi-webcoder.com/public_html/portfolio/wp-content/themes/portfolio",
+"remotePath": "/home/pumiwebcoder/pumiwebcoder.xsrv.jp/public_html/pftest/wp-content/themes/portfolio",

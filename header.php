@@ -24,22 +24,18 @@
 	<header class="l-header p-header">
 		<div class="l-inner">
 			<!-- ロゴ、グローバルナビ、ハンバーガーメニュー -->
-			<div class="p-header__container <?php if (!is_front_page()) echo 'u-flex-center'; ?>">
+			<div class="p-header__container">
 				<!-- ロゴ　　トップページではロゴをh1に、それ以外のページではdivに -->
 				<?php if (is_front_page()) : ?>
 					<h1 class="p-header__logo">
-					<!-- ロゴ（円形） -->
-						<a href="<?php echo home_url('/'); ?>" id="circular-text" class="around-circle">
-							Pumi's Portfolio
-						</a>	
-
+						<a href="<?php echo home_url('/'); ?>">Pumi's<br />Portfolio</a>
 					</h1>
 				<?php else : ?>
 					<div class="p-header__logo"><a href="<?php echo home_url('/'); ?>">Pumi's<br />Portfolio</a></div>
 				<?php endif; ?>
 
 				<!-- グローバルナビ -->
-				<nav class="p-header__nav <?php if (!is_front_page()) echo 'u-hidden-all'; ?>">
+				<nav class="p-header__nav">
 					<?php
 						wp_nav_menu(
 							array(
@@ -55,7 +51,7 @@
 				</nav>
 
 				<!-- ハンバーガーメニュー -->
-				<div class="p-header__hamburger--button <?php if (!is_front_page()) echo 'u-hidden-all'; ?>">
+				<div class="p-header__hamburger--button">
 					<button id="js-drawer__btn" class="c-hamburger-btn" aria-label="ハンバーガーメニュー">
 						<span class="c-hamburger-bar"></span>
 						<span class="c-hamburger-bar"></span>
